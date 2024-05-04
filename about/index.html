@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Procedure - Club+</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../styles.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Procedure";
+        var mkdocs_page_input_path = "about.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Club+
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Procedure</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installationwindows-os">Installation(Windows OS)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#authorization">Authorization</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#access-token">Access Token</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-an-access-token">What is an access token?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-can-this-be-used">How can this be used?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fetching-activities-from-the-strava-onto-the-api">Fetching Activities from the Strava onto the API</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#storing-those-activities-in-the-database">Storing those activities in the database</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#revoking-or-de-authorization-of-the-api-by-the-user">Revoking or de-authorization of the API by the user:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#refreshing-the-access-token">Refreshing the Access token</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-a-refresh-token">What is a refresh token?</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#how-can-this-be-used_1">How can this be used?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#need-for-refresh-token">Need for refresh token?</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Club+</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Procedure</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="procedure">Procedure</h1>
+<h2 id="installationwindows-os">Installation(Windows OS)</h2>
+<p>Install the required dependencies if not installed. Continue with the installation of the API package if these dependencies are satisfied by the System.
+ <strong>Flask</strong>:-  This dependency is utilized for building web applications in Python, enabling the creation of routes and functionalities to handle HTTP requests and responses effectively.</p>
+<ul>
+<li><code>pip  install flask</code></li>
+</ul>
+<p><strong>Requests</strong>:-  It's similar to Postman, Requests is employed to make HTTP requests, including GET and POST, to interact with the Strava API, facilitating communication between the application and the external service.</p>
+<ul>
+<li><code>pip install request</code></li>
+</ul>
+<p><strong>dotenv</strong>:-  By leveraging dotenv, the project can securely access environment variables, such as API keys or sensitive configuration settings, stored in <strong>.env file</strong>, ensuring separation of configuration from code.
+<strong>os</strong>:-  The os module is utilized to interact with the operating system, specifically for loading environment variables from the .env file into the Python script, providing access to the environment configuration required for the application's execution.</p>
+<ul>
+<li><code>pip install dotenv</code></li>
+<li><code>pip install jsonify</code></li>
+</ul>
+<p>Importing the respective packages and ensuring the dependencies are installed according to the following. In your code editor make sure the code is well written:- </p>
+<pre><code class="language-python">from flask import Flask, request, jsonify
+import requests
+from dotenv import flaskload_dotenv
+import os
+</code></pre>
+<p>Now, to install our API use:</p>
+<ul>
+<li><code>pip install strava_api</code></li>
+</ul>
+<p>Moving forward with the usage of API:<br />
+For the Strava OAuth Settings:  </p>
+<ul>
+<li>
+<p>First, the user should go the official <a href="https://www.strava.com/">Strava website</a>
+There, user has to register himself on Strava, create an account and Login.</p>
+</li>
+<li>
+<p>After the login, the user should go to the <strong>Settings</strong> page, there the user will be able to see a option called <strong>"My Apps"</strong>.
+Sometimes, if the option is not visible, user has to explicitly go the <a href="https://www.strava.com/settings/api">https://www.strava.com/settings/api</a> (or apps)</p>
+</li>
+</ul>
+<p>There, if he's new, nothing will be listed prior. Then he has to fill the form accordingly and create his API.
+After the successful creation of the API, the user will be able to see the <strong>Client ID and client secret</strong> listed down.</p>
+<ul>
+<li>Copy them and paste them into a <strong>.env file</strong> into their workspace.  </li>
+</ul>
+<p>Now as we have completed the Installation process, further  we developed 5 functionalities:   </p>
+<ul>
+<li>Authorization.</li>
+<li>Getting the access token.</li>
+<li>Fetching the activities from the Strava API</li>
+<li>Storing those activities in the database</li>
+<li>Revoking or de-authorization of the API by the user.</li>
+<li>Refreshing the Access token.</li>
+</ul>
+<h2 id="authorization">Authorization</h2>
+<p>To use our API, the user has to authorize himself through his Strava account. <br />
+The <strong>“Authorization”</strong>  function in our API is mainly responsible for generating an authorization URL, which the user uses to get the authorization code. The Authorization code is given by Strava itself.
+This process of getting the authorization code can be manually processed or can be automated with the help of front-end.
+Before going to steps involved in authorization, let’s briefly see what is this authorization code and what is its significance-</p>
+<p>Authorization code, is a crucial part of the <strong>OAuth 2.0</strong> authorization framework. It is a alpha-numeric, temporary, sequence, acting as an intermediary step in the OAuth flow, bridging gap between the user authorization and granting access to our API.
+So, here our API authorization route <strong>(“/authorize”)</strong>, defines a function that returns a authorization URL, which is useful in getting authorization code.</p>
+<p><strong>Step-1</strong>: <br />
+First, when the route is accessed, the API server returns a authorization URL, which is of the format:   <code>f"{STRAVA_AUTH_URL}? client_id={CLIENT_ID}&amp;redirect_uri={REDIRECT_URI}&amp;response_type=code&amp;scope={scope}"</code> <br />
+This URL is unique to the user using it, as it involves the CLIENT_ID and the REDIRECT_URL of the respective user.
+So, let’s briefly talk about “SCOPE”, which is mentioned above in the URL.
+Strava's API utilizes various scopes to define the level of access your application can request from a user's Strava account. These scopes are critical for granular control over the data your application can access and ensures user privacy. Here's a breakdown of the different scope types involved in Strava API settings:  </p>
+<p>Common Strava Scopes:  </p>
+<ul>
+<li><code>read</code>: Grants read-only access to public profile data, like username and follower count.</li>
+<li><code>read_all</code>: Extends read access to private profile data of the authorized user, including activities, clubs, and gear.</li>
+<li><code>profile:read_all</code>: Specifically grants read access to all profile information of the authorized user.</li>
+<li>profile:write: Allows your application to modify the authorized user's profile data on Strava (use with caution!).</li>
+<li><code>activity:read</code>: Enables read-only access to the authorized user's activity data, including details like distance and elapsed time.</li>
+<li><code>activity:read_all</code>: Provides read access to all activity data, including private activities of the authorized user.</li>
+<li><code>activity:write</code>: Grants your application permission to create, update, or delete activities on the authorized user's Strava account (be mindful of user privacy).  </li>
+</ul>
+<p><strong>Step-2</strong>: <br />
+Here, user have to use the resultant authorization URL to get the authorization code. To perform this, go to browser, and search this URL.
+If already not logged into Strava account, the URL prompts user to log in.  </p>
+<p><img alt="Step 2" src="../img/Step%202.png" /></p>
+<p><strong>Step-3</strong>:<br />
+After successful login, the user gets redirected to a authorization page, in which user has to authorize the API to access the user’s details(Depends on the scope defined in the URL.)</p>
+<p><img alt="Step 3" src="../img/Step3.png" /></p>
+<p><strong>Step-4</strong>:<br />
+After the user authorizes the API, the user will be redirected to an empty website like shown below. Now, the user should copy the respective URL for that page.  </p>
+<p><img alt="Step 4" src="../img/Step%204.png" /></p>
+<p><strong>Step-5</strong>:<br />
+Now, after copying the URL of that page, user can identify a query parameter in the URL, named “code”. Now, copy the value of that parameter from the URL.
+That value is the authorization code.   </p>
+<p>End of Authorization URL.</p>
+<h2 id="access-token">Access Token</h2>
+<p>Next step in the application, after authorization is, getting access token from the Strava. To get the access token, we make use of the authorization code we have obtained in the previous step. Before going to the steps involved, let’s see what is access token and its significance.  </p>
+<h5 id="what-is-an-access-token"><strong>What is an access token?</strong></h5>
+<p>An access token is like a digital key that grants temporary permission to your application to access a user's data on another platform (Strava in this case, or your future platform). It acts as an intermediary between your app and the user's account.  </p>
+<ul>
+<li><em>Security</em>: Access tokens are crucial for maintaining user privacy and security</li>
+<li><em>Controlled access</em>: Access tokens can be granted with specific scopes, limiting the data your application can access on behalf of the user.</li>
+</ul>
+<h5 id="how-can-this-be-used"><strong>How can this be used?</strong></h5>
+<ul>
+<li>Include the access token in an authorization header when making API requests to your platform. This verifies that the request comes from a legitimate application with the user's permission.
+The expiration time for access tokens can vary depending on the platform's design. In Strava's case, access tokens expire after <em>six hours</em>.
+So, this is a brief info on what access token is, and why do we need it. Now, let’s see the steps involved in obtaining access token. </li>
+</ul>
+<p><strong>Step-1</strong>:<br />
+Now the user has the authorization code, (obtained from the previous step), user can send a POST request to the <code>(“/strava/auth”)</code> route of the API to get the access token. This requests in implemented in the API itself with the help of <code>requests</code> library, to reduce manual work. SO users can just access the URL or route of the API, and let it do the work for you.  </p>
+<p><img alt="Step 1" src="../img/access.png" /></p>
+<p><strong>Step-2</strong>:<br />
+If the entered authorization code turns out to be valid, the API server responds with access token. The access token is sent to the user in <code>JSON</code> format. 
+If the auth code is invalid, corresponding error message and status code are returned.  </p>
+<p><strong>Step-3</strong>:<br />
+Now, user has the <code>“access token”</code>. This allows user to access the authorized data and manipulate it according to the use case. This access token can be used to track, and fetch details about athletes and their activities.</p>
+<h2 id="fetching-activities-from-the-strava-onto-the-api">Fetching Activities from the Strava onto the API</h2>
+<p>By using the access token we got in the previous step, we can fetch the user’s activities. The access token in the session indicates the user is authorized to the user the API and the API can fetch the data from the Strava easily. 
+Before moving to steps involved, let’s see the format, what details the activities in the Strava contain.</p>
+<p><img alt="Step" src="img/trial.png" /></p>
+<p>Now, let’s see steps involved in getting/fetching the user activities.</p>
+<p><strong>Step-1</strong>:</p>
+<p>Send a get request to the API server, to the route <code>(“/activities”)</code> with an access token as input, </p>
+<p><img alt="Step" src="../img/Steps3.png" /></p>
+<p><strong>Step-2</strong>:</p>
+<p>Now, if the access token which is inputted to the URL is valid, then the server responds back to the user with the list of activities under the Strava account.
+If there are no activities performed by the account yet, the server returns a empty array or returns a JSON array containing all the fields (as above shown) of a activity or activities performed.</p>
+<p><img alt="Step" src="../img/Steps2.png" /></p>
+<p><em>Note, if the access token is either expired or invalid, the server does not fetch the activities from the Strava. So, then user has to sort the corresponding issue and get back to sending requests to the route of the URL.</em></p>
+<h2 id="storing-those-activities-in-the-database">Storing those activities in the database</h2>
+<h2 id="revoking-or-de-authorization-of-the-api-by-the-user">Revoking or de-authorization of the API by the user:</h2>
+<p>So, a user can make use of the route <code>(“/revoke_token”)</code> to revoke the token. Revoking the token means the API has no longer access to the user’s strava details.</p>
+<p>This can also be performed through the strava official page as well.</p>
+<p>Send a POST request to the route of the API server.
+Now, the API server revokes the access token and replies to you.</p>
+<h2 id="refreshing-the-access-token">Refreshing the Access token</h2>
+<h3 id="what-is-a-refresh-token"><strong>What is a refresh token?</strong></h3>
+<p>A refresh token is like a backstage pass that goes along with your access token (the frontstage key). While the access token grants temporary access to a user's data, the refresh token allows your application to acquire new access tokens without needing the user to re-authenticate each time.</p>
+<h4 id="how-can-this-be-used_1"><strong>How can this be used?</strong></h4>
+<p>Once an access token expires, your application can send the refresh token back to the authorization server (like Strava's server or your future platform's server) to get a new access token. This typically happens behind the scenes without the user's involvement.</p>
+<h4 id="need-for-refresh-token"><strong>Need for refresh token?</strong></h4>
+<p><em>(Not mandatory, but beneficial)</em></p>
+<p>Refresh tokens are not essential for every API, but they significantly improve user experience, especially for applications that require frequent access to user data.</p>
+<p>The procedure is almost the same as getting the <code>“access token”</code>. The only difference is, that instead of sending the refresh token, we send the old, expired access token as input to the server and ask for the new access token.</p>
+<p>This can achieved with the help of the <code>(“/refresh_token”)</code> route in the API.</p>
+<p><strong><em>As far as strava is considered, refersh token never expires</em></strong></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
