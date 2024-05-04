@@ -1,0 +1,7 @@
+site_name: Club+
+nav:
+  - Home: index.md
+  - Procedure: about.md
+theme: readthedocs
+extra_css:
+  - styles.css
